@@ -99,11 +99,44 @@ namespace Console_Part3_4
                         {
                             name_highest_age = "Unkown";
                         }
-                        Console.WriteLine($"{name_highest_age} heeft de oudste leeftijd van: {highest_age}");
+                        Console.WriteLine($"de oudste leeftijd is: {highest_age}");
                         break;
                     case 5:
+                        Console.WriteLine("enter a name: ");
+                        Console.WriteLine("example: John,20");
+                        Console.WriteLine("to exit, press 'enter'");
+
+                        var list_name_and_age1 = new List<string>();
+                        string name_and_age1 = Console.ReadLine();
+                        var name_highest_age1 = "";
+                        var highest_age1 = 0;
+
+                        while (name_and_age1 != "")
+                        {
+                            list_name_and_age1.Add(name_and_age1);
+                            name_and_age1 = Console.ReadLine();
+                        }
+
+                        foreach (var item in list_name_and_age1)
+                        {
+                            var splitted1 = item.Split(',');
+                            var name1 = splitted1.First();
+                            var age1 = int.Parse(splitted1.Last());
+
+                            if (age1 > highest_age1)
+                            {
+                                name_highest_age1 = name1;
+                                highest_age1 = age1;
+                            }
+                        }
+                        if (name_highest_age1 == "")
+                        {
+                            name_highest_age1 = "Unkown";
+                        }
+                        Console.WriteLine($"Name of the oldest: {name_highest_age1}");
                         break;
                     case 6:
+
                         break;
                     case 7:
                         break;
