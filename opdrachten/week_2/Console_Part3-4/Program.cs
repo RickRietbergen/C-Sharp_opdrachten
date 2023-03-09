@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml.Linq;
 
 namespace Console_Part3_4
 {
@@ -94,9 +95,11 @@ namespace Console_Part3_4
                                 highest_age = age;
                             }
                         }
+                        if (name_highest_age == "")
+                        {
+                            name_highest_age = "Unkown";
+                        }
                         Console.WriteLine($"{name_highest_age} heeft de oudste leeftijd van: {highest_age}");
-
-
                         break;
                     case 5:
                         break;
