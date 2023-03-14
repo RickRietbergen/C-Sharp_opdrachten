@@ -102,7 +102,7 @@ namespace Console_Part3_4
                         Console.WriteLine($"de oudste leeftijd is: {highest_age}");
                         break;
                     case 5:
-                        Console.WriteLine("enter a name: ");
+                        Console.WriteLine("enter a name,age: ");
                         Console.WriteLine("example: John,20");
                         Console.WriteLine("to exit, press 'enter'");
 
@@ -136,7 +136,35 @@ namespace Console_Part3_4
                         Console.WriteLine($"Name of the oldest: {name_highest_age1}");
                         break;
                     case 6:
+                        Console.WriteLine("enter a name,age: ");
+                        Console.WriteLine("example: John,2005");
+                        Console.WriteLine("to exit, press 'enter'");
+                        
+                        var input_list = new List<string>();
+                        string word = Console.ReadLine();
+                        var word_longest_name = "Unkown";
+                        var word_highest_age = 0;
+                        
+                        while (word != "")
+                        {
+                            input_list.Add(word);
+                            word = Console.ReadLine();
+                        }
 
+                        foreach (var item in input_list)
+                        {
+                            var splitted_word = item.Split(',');
+                            var longest_name = splitted_word.First();
+                            var splitted_highest_age = int.Parse(splitted_word.Last());
+
+                            if (splitted_highest_age > word_highest_age)
+                            {
+                                word_highest_age = splitted_highest_age;
+                                word_longest_name = longest_name;
+                            }
+                        }
+                        Console.WriteLine($"Longest name: {word_longest_name}");
+                        Console.WriteLine($"Highest age: {word_highest_age}");
                         break;
                     case 7:
                         break;
