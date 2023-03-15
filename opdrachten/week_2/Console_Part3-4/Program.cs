@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Xml.Linq;
 using exercise_95;
+using exercise_96;
 
 namespace Console_Part3_4
 {
@@ -173,6 +174,8 @@ namespace Console_Part3_4
                         myDog.PrintInfo();
                         break;
                     case 8:
+                        Room myRoom = new Room("testRoom", 30);
+                        myRoom.PrintInfo();
                         break;
                     case 9:
                         break;
