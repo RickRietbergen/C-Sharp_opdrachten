@@ -168,7 +168,6 @@ namespace Console_Part3_4
                         Console.WriteLine($"Highest age: {word_highest_age}");
                         break;
                     case 7:
-
                         break;
                     case 8:
                         break;
