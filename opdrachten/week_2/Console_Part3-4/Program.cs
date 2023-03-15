@@ -15,19 +15,19 @@ namespace Console_Part3_4
                 Console.WriteLine("Menu:");
                 Console.WriteLine("Select An Option: ");
                 Console.WriteLine("0. exit");
-                Console.WriteLine("1. 3-16");
-                Console.WriteLine("2. 3-21");
-                Console.WriteLine("3. 3-28");
-                Console.WriteLine("4. 3-29");
-                Console.WriteLine("5. 3-30");
-                Console.WriteLine("6. 3-31");
-                Console.WriteLine("7. 4-3");
-                Console.WriteLine("8. 4-4");
-                Console.WriteLine("9. 4-21");
-                Console.WriteLine("10. 4-22");
-                Console.WriteLine("11. 4-23");
-                Console.WriteLine("12. 4-24");
-                Console.WriteLine("13. 4-26");
+                Console.WriteLine("1. 3-16 Remove Last Method");
+                Console.WriteLine("2. 3-21 Array in Stars");
+                Console.WriteLine("3. 3-28 Last Part Split");
+                Console.WriteLine("4. 3-29 CSV Age");
+                Console.WriteLine("5. 3-30 CSV Name");
+                Console.WriteLine("6. 3-31 Maximum Name and Age");
+                Console.WriteLine("7. 4-3 First Class");
+                Console.WriteLine("8. 4-4 Classroom");
+                Console.WriteLine("9. 4-21 Book Class");
+                Console.WriteLine("10. 4-22 Reading Strings");
+                Console.WriteLine("11. 4-23 Reading Integers");
+                Console.WriteLine("12. 4-24 Reading File");
+                Console.WriteLine("13. 4-26 Guestlist Txt");
                 var choice = int.Parse(Console.ReadLine());
                 Console.WriteLine("==========");
 
@@ -168,6 +168,7 @@ namespace Console_Part3_4
                         Console.WriteLine($"Highest age: {word_highest_age}");
                         break;
                     case 7:
+
                         break;
                     case 8:
                         break;
