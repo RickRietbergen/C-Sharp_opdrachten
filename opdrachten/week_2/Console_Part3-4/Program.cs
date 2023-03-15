@@ -144,6 +144,7 @@ namespace Console_Part3_4
                         string word = Console.ReadLine();
                         var word_longest_name = "Unkown";
                         var word_highest_age = 0;
+                        var current_year = 2023;
                         
                         while (word != "")
                         {
@@ -159,7 +160,7 @@ namespace Console_Part3_4
 
                             if (splitted_highest_age > word_highest_age)
                             {
-                                word_highest_age = splitted_highest_age;
+                                word_highest_age = current_year - splitted_highest_age;
                                 word_longest_name = longest_name;
                             }
                         }
