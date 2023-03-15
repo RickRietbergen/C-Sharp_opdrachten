@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Xml.Linq;
+using exercise_95;
 
 namespace Console_Part3_4
 {
@@ -168,6 +169,8 @@ namespace Console_Part3_4
                         Console.WriteLine($"Highest age: {word_highest_age}");
                         break;
                     case 7:
+                        Dog myDog = new Dog("Spyke", "BoomerHond", 9);
+                        myDog.PrintInfo();
                         break;
                     case 8:
                         break;
