@@ -2,6 +2,7 @@
 using System.Xml.Linq;
 using exercise_95;
 using exercise_96;
+using exercise_97;
 
 namespace Console_Part3_4
 {
@@ -178,6 +179,41 @@ namespace Console_Part3_4
                         myRoom.PrintInfo();
                         break;
                     case 9:
+                        List<Book> books = new List<Book>();
+
+                        while (true)
+                        {
+                            Console.WriteLine("Enter a title of a book (or press enter to exit)");
+                            string book_title = Console.ReadLine();
+                            if (book_title == "")
+                            {
+                                break;
+                            }
+
+                            Console.WriteLine("Enter the amount of pages:");
+                            int book_pages = int.Parse(Console.ReadLine());
+
+                            Console.WriteLine("Enter the books publication year:");
+                            int book_PublicationYear = int.Parse(Console.ReadLine());
+
+                            books.Add(new Book(book_title, book_pages, book_PublicationYear));
+                        }
+                        Console.WriteLine("What information do you want to print? ( title(t) or everything(e) )");
+                        string printOption = Console.ReadLine();
+                        if (printOption == "everything" || printOption == "e")
+                        {
+                            foreach (Book book in books)
+                            {
+                                Console.WriteLine("Title: {0} \nTotal pages:{1} \nPublished in {2}", book.book_title, book.book_pages, book.book_PublicationYear);
+                            }
+                        }
+                        if (printOption == "title" || printOption == "t")
+                        {
+                            foreach (Book book in books)
+                            {
+                                Console.WriteLine("Title: " + book.book_title);
+                            }
+                        }
                         break;
                     case 10:
                         break;
