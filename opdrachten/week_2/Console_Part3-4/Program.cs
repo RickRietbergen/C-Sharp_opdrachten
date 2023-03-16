@@ -216,6 +216,17 @@ namespace Console_Part3_4
                         }
                         break;
                     case 10:
+                        int count = 0;
+                        while (true)
+                        {
+                            string random_input = Console.ReadLine();
+                            if (random_input == "end")
+                            {
+                                break;
+                            }
+                            count++;
+                        }
+                        Console.WriteLine(count);
                         break;
                     case 11:
                         break;
