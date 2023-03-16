@@ -229,6 +229,24 @@ namespace Console_Part3_4
                         Console.WriteLine($"total words: {count}");
                         break;
                     case 11:
+                        string inputje = "";
+                        while (inputje != "end")
+                        {
+                            Console.Write("> ");
+                            inputje = Console.ReadLine();
+                            int number;
+                            if (int.TryParse(inputje, out number))
+                            {
+                                Console.WriteLine(number * number * number);
+                            }
+                            else if (inputje != "end")
+                            {
+                                Console.WriteLine("Invalid input!");
+                            }
+                        }
+                        Console.WriteLine("end");
+                        break;
+                    case 12:
                         string fileName = "data.txt";
                         if (File.Exists(fileName))
                         {
@@ -245,7 +263,7 @@ namespace Console_Part3_4
                             Console.WriteLine("File not found: " + fileName);
                         }
                         break;
-                    case 12:
+                    case 13:
                         string fileName1 = "guestlist.txt";
                         string[] guestList = File.ReadAllLines(fileName1);
 
@@ -276,8 +294,6 @@ namespace Console_Part3_4
                             }
                         }
                         Console.WriteLine("\nThank you!");
-                        break;
-                    case 13:
                         break;
                 }
             }
