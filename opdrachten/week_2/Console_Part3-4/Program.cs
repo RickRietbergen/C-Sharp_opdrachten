@@ -226,7 +226,7 @@ namespace Console_Part3_4
                             }
                             count++;
                         }
-                        Console.WriteLine(count);
+                        Console.WriteLine($"total words: {count}");
                         break;
                     case 11:
                         break;
