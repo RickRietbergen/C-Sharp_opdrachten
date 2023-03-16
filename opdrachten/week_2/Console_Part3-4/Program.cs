@@ -246,6 +246,36 @@ namespace Console_Part3_4
                         }
                         break;
                     case 12:
+                        string fileName1 = "guestlist.txt";
+                        string[] guestList = File.ReadAllLines(fileName1);
+
+                        Console.WriteLine("Enter names, an empty line quits.");
+                        while (true)
+                        {
+                            string input_1 = Console.ReadLine();
+                            if (input_1 == "")
+                            {
+                                break;
+                            }
+                            bool isOnList = false;
+                            foreach (string name in guestList)
+                            {
+                                if (input_1 == name)
+                                {
+                                    isOnList = true;
+                                    break;
+                                }
+                            }
+                            if (isOnList)
+                            {
+                                Console.WriteLine("The name is on the list.");
+                            }
+                            else
+                            {
+                                Console.WriteLine("The name is not on the list.");
+                            }
+                        }
+                        Console.WriteLine("\nThank you!");
                         break;
                     case 13:
                         break;
