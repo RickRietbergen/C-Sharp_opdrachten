@@ -229,6 +229,21 @@ namespace Console_Part3_4
                         Console.WriteLine($"total words: {count}");
                         break;
                     case 11:
+                        string fileName = "data.txt";
+                        if (File.Exists(fileName))
+                        {
+                            using (StreamReader reader = new StreamReader(fileName))
+                            {
+                                while (!reader.EndOfStream)
+                                {
+                                    Console.WriteLine(reader.ReadLine());
+                                }
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("File not found: " + fileName);
+                        }
                         break;
                     case 12:
                         break;
