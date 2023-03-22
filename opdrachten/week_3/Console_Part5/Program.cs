@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml.Linq;
 
 namespace Console_Part5
 {
@@ -30,8 +31,38 @@ namespace Console_Part5
                         Environment.Exit(0);
                         break;
                     case 1:
+                        HealthStation childrensHospital = new HealthStation();
+
+                        Person ethan = new Person("Ethan", 1, 110, 7);
+                        Person peter = new Person("Peter", 33, 176, 85);
+
+                        Console.WriteLine(ethan.name + " weight: " + childrensHospital.Weigh(ethan) + " kilos");
+                        Console.WriteLine(peter.name + " weight: " + childrensHospital.Weigh(peter) + " kilos");
+
+                        childrensHospital.Feed(ethan);
+                        childrensHospital.Feed(peter);
+
+                        Console.WriteLine(ethan.name + " weight: " + childrensHospital.Weigh(ethan) + " kilos");
+                        Console.WriteLine(peter.name + " weight: " + childrensHospital.Weigh(peter) + " kilos");
+
+                        childrensHospital.Weigh(ethan);
+                        childrensHospital.Weigh(ethan);
+                        childrensHospital.Weigh(ethan);
+                        childrensHospital.Weigh(ethan);
+
+                        Console.WriteLine("weighings performed: " + childrensHospital.weighings);
                         break;
                     case 2:
+                        PaymentCard petesCard = new PaymentCard(10);
+
+                        Console.WriteLine("money " + petesCard.balance);
+                        bool wasSuccessful = petesCard.TakeMoney(8);
+                        Console.WriteLine("successfully withdrew: " + wasSuccessful);
+                        Console.WriteLine("money " + petesCard.balance);
+
+                        wasSuccessful = petesCard.TakeMoney(4);
+                        Console.WriteLine("successfully withdrew: " + wasSuccessful);
+                        Console.WriteLine("money " + petesCard.balance);
                         break;
                     case 3:
                         break;
