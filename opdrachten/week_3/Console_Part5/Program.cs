@@ -67,6 +67,18 @@ namespace Console_Part5
                     case 3:
                         break;
                     case 4:
+                        Song jackSparrow = new Song("The Lonely Island", "Jack Sparrow", 196);
+                        Song anotherSparrow = new Song("The Lonely Island", "Jack Sparrow", 196);
+
+                        if (jackSparrow.Equals(anotherSparrow))
+                        {
+                            Console.WriteLine("Songs are equal.");
+                        }
+
+                        if (jackSparrow.Equals("Another object"))
+                        {
+                            Console.WriteLine("Strange things are afoot.");
+                        }
                         break;
                     case 5:
                         break;
