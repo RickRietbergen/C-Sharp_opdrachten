@@ -65,6 +65,15 @@ namespace Console_Part5
                         Console.WriteLine("money " + petesCard.balance);
                         break;
                     case 3:
+                        Pet lucy = new Pet("Lucy", "golden retriever");
+                        Person_pet leo = new Person_pet("Leo", lucy);
+                        Console.WriteLine(leo);
+
+                        Person_pet mike = new Person_pet("Mike");
+                        Console.WriteLine(mike);
+
+                        Person_pet lilo = new Person_pet();
+                        Console.WriteLine(lilo);
                         break;
                     case 4:
                         Song jackSparrow = new Song("The Lonely Island", "Jack Sparrow", 196);
